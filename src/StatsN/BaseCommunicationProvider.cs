@@ -77,7 +77,7 @@ namespace StatsN
         /// <returns></returns>
         internal Task SendMetric(string metric)
         {
-            var payload = Encoding.ASCII.GetBytes(metric + Environment.NewLine);
+            var payload = Encoding.ASCII.GetBytes(metric);
             if (Options.BufferMetrics)
             {
                 Queue.Enqueue(payload);
